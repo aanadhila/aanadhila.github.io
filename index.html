@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+        <div class="corak"></div>
+        <header><a href="#" class="logo"><img src="logo.svg" class="logo"></a>
+            <ul>
+                <li><a href="http://localhost/dasarWeb/UTS/#">HOME</a></li>
+                <li><a href="http://localhost/dasarWeb/UTS/biodata.html#">BIODATA</a></li>
+                <li><a href="http://localhost/dasarWeb/UTS/profil.html">PROFIL</a></li>
+
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>BUKAN WARUNG BIASA <br>WARUNG <span>INTERNASIONAL</span> </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur consequatur quod ex
+                    veniam repudiandae mollitia eligendi, nostrum optio? Itaque sequi saepe fugit aliquid consectetur
+                    illum pariatur ex aspernatur molestias!</p>
+                <a href="http://localhost/dasarWeb/UTS/pesan.html">PESAN SEKARANG!</a>
+            </div>
+            <div class="gambar">
+                <img src="gambar1.svg" class="menu">
+            </div>
+        </div>
+        <ul class="tombol">
+            <li><img src="tombol1.svg" onclick="imgSlider('gambar1.svg')"></li>
+            <li><img src="tombol2.svg" onclick="imgSlider('gambar2.svg')"></li>
+            <li><img src="tombol3.svg" onclick="imgSlider('gambar3.svg')"></li>
+
+        </ul>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.menu').src = anything;
+        }
+
+    </script>
+</body>
+
+</html>

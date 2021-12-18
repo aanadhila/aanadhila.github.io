@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <title>MENU</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+
+<body>
+    <header><a href="#" class="logo"><img src="logo.svg" class="logo"></a>
+        <ul>
+            <li><a href="http://localhost/dasarWeb/UTS/#">HOME</a></li>
+            <li><a href="http://localhost/dasarWeb/UTS/biodata.html#">BIODATA</a></li>
+            <li><a href="http://localhost/dasarWeb/UTS/profil.html">PROFIL</a></li>
+
+        </ul>
+    </header>
+    <h1>MENU</h1>
+    <section class="content">
+        <div class="card">
+            <img src="gambar1.svg" height="150" width="150">
+            <h2>Nasi uduk</h2>
+            <p>Rp 10.000</p>
+        </div>
+
+        <div class="card">
+            <img src="gambar2.svg" height="150" width="150">
+            <h2>Sop jamur</h2>
+            <p>Rp 15.000</p>
+        </div>
+
+        <div class="card">
+            <img src="gambar3.svg" height="150" width="150">
+            <h2>Nasi goreng</h2>
+            <p>Rp 12.000</p>
+        </div>
+
+        <div class="card">
+            <img src="gambar4.svg" height="150" width="150">
+            <h2>Pizza</h2>
+            <p>Rp 50.000</p>
+        </div>
+
+        <div class="card">
+            <img src="gambar5.svg" height="150" width="150">
+            <h2>Nachos</h2>
+            <p>Rp 20.000</p>
+        </div>
+
+        <div class="card">
+            <img src="gambar6.svg" height="150" width="150">
+            <h2>Bibimbab</h2>
+            <p>Rp 35.000</p>
+        </div>
+    </section>
+    <section pesan>
+        <form name="form2" action="#">
+            <table border="5px">
+                <tr>input pembelian
+                    <td colspan="2" align="center">Nama</td>
+                    <td><input name="nama" type="text" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">ID Pembeli</td>
+                    <td><input name="id" type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">STATUS?</td>
+                    <td>
+                        <input type="radio" name="st" value="member" onfocus="this.select()"
+                            onChange="pemesanan()"><label for="member">MEMBER</label>
+                        <input type="radio" name="st" value="nonmember" onfocus="this.select()"
+                            onChange="pemesanan()"><label for="status1">Non-Member</label>
+                        </select>
+                    </td>
+
+                    </td>
+
+                </tr>
+                <tr height="50" bgcolor="orange" align="center">
+                    <td colspan="3">Masukkan pesanan</th>
+                </tr>
+                <tr>
+                    <th bgcolor="#fff">No</th>
+                    <th bgcolor="#fff">Makanan</th>
+                    <th bgcolor="#fff">Jumlah</th>
+                </tr>
+                <tr>
+                    <td width="20" bgcolor="#fff">1</td>
+                    <td width="400" bgcolor="#fff">Nasi Uduk</td>
+                    <td width="160"><input type="text" name="hrguduk" value="0" onfocus="this.select()"
+                            onChange="pemesanan()" /></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#fff">2</td>
+                    <td bgcolor="#fff">Sop jamur</td>
+                    <td><input type="text" name="hrgsop" value="0" onfocus="this.select()" onChange="pemesanan()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#fff">3</td>
+                    <td bgcolor="#fff">Nasi goreng</td>
+                    <td><input type="text" name="hrgnasgor" value="0" onfocus="this.select()" onChange="pemesanan()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#fff">4</td>
+                    <td bgcolor="#fff">Pizza</td>
+                    <td><input type="text" name="hrgpizza" value="0" onfocus="this.select()" onChange="pemesanan()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#fff">5</td>
+                    <td bgcolor="#fff">Nachos</td>
+                    <td><input type="text" name="hrgnachos" value="0" onfocus="this.select()" onChange="pemesanan()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#fff">6</td>
+                    <td bgcolor="#fff">Bibimbab</td>
+                    <td><input type="text" name="hrgbibimbab" value="0" onfocus="this.select()"
+                            onChange="pemesanan()" /></td>
+                </tr>
+                <tr height="50" bgcolor="orange" align="center">
+                    <td colspan="3">Rincian pesanan</th>
+                </tr>
+                
+                     <tr bgcolor="##fff">
+                    <td colspan="2" align="right">Jumlah Total</td>
+                    <td><input type="text" name="Total" readonly="readonly" /></td>
+                </tr>
+                <tr bgcolor="##fff">
+                    <td colspan="2" align="right">Diskon</td>
+                    <td><input type="text" name="Diskon" readonly="readonly" /></td>
+                </tr>
+                <tr bgcolor="##fff">
+                    <td colspan="2" align="right">Jumlah Dibayar</td>
+                    <td><input type="text" name="Bayar" readonly="readonly" align="right" /></td>
+                </tr>
+            </table><br />
+            <input type="button" value="CLEAR" onClick="resetForm()" class="klir" />
+        </form>
+    </section>
+    <script language="JavaScript" type="text/javascript">
+        function pemesanan() {
+            var nota = document.form2;
+            var hargaUduk = 10000 * eval(nota.hrguduk.value);
+            var hargaSop = 15000 * eval(nota.hrgsop.value);
+            var hargaNasgor = 12000 * eval(nota.hrgnasgor.value);
+            var hargaPizza = 50000 * eval(nota.hrgpizza.value);
+            var hargaNachos = 20000 * eval(nota.hrgnachos.value);
+            var hargaBibimbam = 35000 * eval(nota.hrgbibimbab.value);
+
+
+            var TotalHarga = hargaUduk + hargaSop +
+                hargaNasgor + hargaPizza + hargaNachos + hargaBibimbam;
+            var jumlah = eval(nota.hrguduk.value) + eval(nota.hrgsop.value) + eval(nota.hrgnasgor.value) + eval(nota.hrgpizza.value) + eval(nota.hrgnachos.value) + eval(nota.hrgbibimbab.value);
+
+            var member = (document.getElementsByName('st')[0].checked ? 1 : 0);
+            console.log(member);
+            if (member == "member") {
+                if (jumlah = 1) {
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value = TotalHarga * 0.05;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+                } else if (jumlah >1) {
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value =TotalHarga * 0.07;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+                }else if(jumlah > 3){
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value = TotalHarga * 0.1;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+                }
+            } else {
+               if (jumlah < 3) {
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value = 0;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+               } else if(jumlah<=5 && jumlah >=3){
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value =  TotalHarga * 0.05;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+               }else {
+                nota.Total.value = TotalHarga;
+                nota.Diskon.value =  TotalHarga * 0.05 /jumlah;
+                nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+               }
+            }
+
+        }
+
+        function resetForm() {
+            document.form2.reset();
+        }
+    </script>
+
+</body>
+
+</html>
